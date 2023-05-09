@@ -1,6 +1,6 @@
 .app__signin{
     margin: 0;
-    padding: 10rem;
+    padding: 4rem;
     box-sizing: border-box;
     background: linear-gradient(90deg, rgba(108,180,238,1) 0%, rgba(255,166,201,1) 100%);
     height: 100vh;
@@ -11,46 +11,76 @@
 }
 .app__signin-contain{
     display: flex;
-    border-radius: 1rem;
+    height: 80vh;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    border-radius: 2rem 2rem 2rem 2rem;
+    -webkit-box-shadow: 1px 4px 20px -6px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 1px 4px 20px -6px rgba(66, 68, 90, 1);
+    box-shadow: 1px 4px 20px -6px rgba(66, 68, 90, 1);
 }
 .app__signin-contain__left{
+    height: auto;
     background-color: #fff;
-    width: 60%;
+    width: 70%;
     padding: 5rem;
     display: flex;
     flex-direction: column;
+    border-radius: 2rem 0rem 0rem 2rem;
 }
 .app__signin-contain__left h1{
     padding: 1rem 0;
+    margin: 0.5rem 0;
 }
 .field__group{
-    padding: 0.5rem 0;
+    margin-bottom: 1rem;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.field__group label{
+    padding: 0.2rem 0;
+    font-size: normal;
 }
 .field__group input{
+    width: 50%;
     outline: none;
     border: none;
-    height: 1.2rem;
+    height: 2rem;
     background-color: rgba(255,166,201,1);
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     padding: 0.5rem;
+    color: #000;
 }
 .app__signin-contain__left button{
-    justify-content:space-evenly;
-    align-items: center;
-    margin: 1rem 0;
-    margin-left: 3.5rem;
-    padding: 0.3rem 0.6rem;
+    width: 7rem;
+    padding: 0.5rem;
+    color: #fff;
+    background-color: rgba(255,166,201,1);
     border: none;
     outline: none;
     border-radius: 1rem;
     cursor: pointer;
+    margin-left: 6.8rem;
 }
-.form__link{
+/* .form__link{
     font-size:medium;
     margin-top: 0.5rem;
+} */
+.app__signin-contain__left-top{
+    display: flex;
+    flex-direction: column;
+}
+.app__signin-contain__left-top span{
+    margin: 1rem 0;
+    color: rgba(255,166,201,1);
+    font-size:x-large;
+    font-weight: 600;
 }
 .app__signin-contain__right{
-    width: 40%;
+    height: auto;
+    width: 30%;
     background-color: #6cb4ee;
+    border-radius: 1.5rem 2rem 2rem 1.5rem;
 }
