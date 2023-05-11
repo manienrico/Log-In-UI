@@ -19,17 +19,38 @@
     -webkit-box-shadow: 1px 4px 20px -6px rgba(66, 68, 90, 1);
     -moz-box-shadow: 1px 4px 20px -6px rgba(66, 68, 90, 1);
     box-shadow: 1px 4px 20px -6px rgba(66, 68, 90, 1);
+
+    position: relative;
+}
+.app__signin-contain__picture{
+    position: absolute;
+    right: -6.7%;
+    bottom: 2rem;
+    height: 25rem;
+    width: 50rem;
+}
+.app__signin-contain__picture img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
 .app__signin-contain__left{
-    height: auto;
-    background-color: #fff;
+    display: flex;
     width: 70%;
+    background-color: #fff;
+    border-radius: 2rem 0rem 0rem 2rem;
+}
+.app__signin-contain__left-content{
+    height: auto;
+    background-color: transparent;
+    width: 65%;
     padding: 5rem;
     display: flex;
     flex-direction: column;
-    border-radius: 2rem 0rem 0rem 2rem;
+    
 }
-.app__signin-contain__left h1{
+
+.app__signin-contain__left-content h1{
     padding: 1rem 0;
     margin: 0.5rem 0;
 }
@@ -43,8 +64,11 @@
     padding: 0.2rem 0;
     font-size: normal;
 }
-.field__group input{
-    width: 50%;
+.pwd__contain{
+    display: flex;
+}
+.pwd__contain input,.field__group input{
+    width: 100%;
     outline: none;
     border: none;
     height: 2rem;
@@ -53,7 +77,13 @@
     padding: 0.5rem;
     color: #000;
 }
-.app__signin-contain__left button{
+.pwd__contain sup{
+    justify-content: center;
+    align-items: center;
+    padding: 0.6rem 0.3rem;
+    cursor: pointer;
+}
+.app__signin-contain__left-content button{
     width: 7rem;
     padding: 0.5rem;
     color: #fff;
@@ -62,12 +92,9 @@
     outline: none;
     border-radius: 1rem;
     cursor: pointer;
-    margin-left: 6.8rem;
+    margin: 1rem 0rem 1rem 7rem;
 }
-/* .form__link{
-    font-size:medium;
-    margin-top: 0.5rem;
-} */
+
 .app__signin-contain__left-top{
     display: flex;
     flex-direction: column;
@@ -83,4 +110,25 @@
     width: 30%;
     background-color: #6cb4ee;
     border-radius: 1.5rem 2rem 2rem 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and(max-width: ) {
+    
 }
