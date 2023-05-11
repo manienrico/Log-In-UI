@@ -47,7 +47,6 @@
     padding: 5rem;
     display: flex;
     flex-direction: column;
-    
 }
 
 .app__signin-contain__left-content h1{
@@ -112,23 +111,176 @@
     border-radius: 1.5rem 2rem 2rem 1.5rem;
 }
 
+@media screen and (max-width: 1259px){
+    .app__signin-contain__picture{
+        right: -3%;
+        bottom: 2rem;
+        height: 22rem;
+        width: 45rem;
+    }
+    /* .app__signin-contain__picture img{
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and(max-width: ) {
-    
+    } */
 }
+@media screen and (max-width: 1225px) {
+    .app__signin-contain__picture{
+        right: -3%;
+        bottom: 2rem;
+        height: 21rem;
+        width: 40rem;
+    }
+}
+@media screen and (max-width: 1087px){
+    .app__signin-contain__picture{
+        right: -3%;
+        bottom: 2rem;
+        height: 20rem;
+        width: 35rem;
+    }
+    .app__signin-contain__left-content button{
+        margin: 0.2rem 0rem 1rem 5rem;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .app__signin-contain__picture{
+        right: -3%;
+        height: 19.5rem;
+        width: 35rem;
+    }
+    .app__signin-contain__left-content button{
+        margin: 0.2rem 0rem 1rem 4.5rem;
+    }
+}
+@media screen and (max-width: 996px){
+    .app__signin-contain__picture{
+        right: -1%;
+        height: 20rem;
+        width: 30rem;
+    }
+    .app__signin-contain__left-content button{
+        margin: 0.2rem 0rem 1rem 3.6rem;
+    }
+}
+@media screen and (max-width: 970px){
+    .app__signin-contain__picture{
+        right: 5%;
+        bottom: 1rem;
+        height: 20rem;
+        width: 24rem;
+    }
+}
+@media screen and (max-width: 900px){
+    .app__signin-contain__picture{
+        display: none;
+    }
+    .app__signin-contain__left-content{
+        width: 30rem;
+    }
+    .pwd__contain input,.field__group input,.pwd__contain{
+        width: 100%;
+    }
+    .app__signin-contain__left-content button{
+        margin: 0.2rem 0rem 1rem 5.8rem;
+    }
+    .app__signin-contain__left-content{
+        padding-top: 2rem;
+        padding-bottom: 1.5rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    .app__signin-contain__picture{
+        display: none;
+    }
+    .app__signin-contain__left-content{
+        width: 30rem;
+    }
+    .pwd__contain input,.field__group input,.pwd__contain{
+        width: 100%;
+    }
+    .app__signin-contain__left-content button{
+        margin: 0.2rem 0rem 1rem 3.6rem;
+    }
+    .app__signin-contain__left-content{
+        padding-top: 2rem;
+        padding-bottom: 1.5rem;
+    }
+}
+@media screen and (max-width: 720px){
+    .app__signin-contain__right{
+        display: none;
+    }
+    .app__signin-contain__left-content{
+        width: 27rem;
+    }
+    .pwd__contain input,.field__group input,.pwd__contain{
+        width: 100%;
+    }
+    .app__signin-contain__left-content button{
+        margin: 0.2rem 0rem 1rem 4.5rem;
+    }
+    .app__signin-contain__left-content{
+        padding-top: 2rem;
+        padding-bottom: 1.5rem;
+    }
+}
+@media screen and (max-width: 681px){
+    .app__signin-contain__left-top span{
+        font-size: large;
+    }
+    .app__signin-contain__left-top h5{
+        width: 10rem;
+    }
+    .app__signin-contain__left-content h1{
+        width: 10rem;
+    }
+    .pwd__contain input,.field__group input,.pwd__contain{
+        width: 16rem;
+    }
+    .app__signin-contain__left-content button{
+        margin: 0.2rem 0rem 1rem 3.8rem;
+    }
+}
+@media screen and (max-width: 556px){
+    .app__signin-contain__left-content{
+        justify-content: center;
+        align-items: center;
+        width: 20rem;
+    }
+    .pwd__contain input,.field__group input,.pwd__contain{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 320px){
+    .app__signin-contain__left-content{
+        justify-content: center;
+        align-items: center;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding: 1rem 0rem;
+        font-size: 0.8rem;
+    }
+    .app__signin-contain__left-content button{
+        margin: 0.2rem 0rem 1rem 2rem;
+        font-size: 0.8rem;
+        padding: 0.4rem;
+    }
+}
+/* @media screen and (max-width: 1024px) {
+    .app__signin-contain__picture{
+        right: -9%;
+        bottom: 1.5rem;
+        height: 20rem;
+        width: 40rem;
+    }
+    .app__signin-contain__left-content button{
+        width: 7rem;
+        /* padding: 0.5rem;
+        color: #fff;
+        background-color: rgba(255,166,201,1);
+        border: none;
+        outline: none;
+        border-radius: 1rem; 
+        cursor: pointer;
+        margin: 0.2rem 0rem 1rem 4.5rem;
+    }
+} */
