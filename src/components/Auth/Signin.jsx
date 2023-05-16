@@ -6,6 +6,7 @@ import pj from '../../images/peterJohn2.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight,faEye,faEyeSlash } from '@fortawesome/free-solid-svg-icons'
+import { LoginFunction } from '../../api/LoginAPI'
 
 function Signin() {
   const [toggleEye, setToggleEye] = useState(false)
@@ -41,6 +42,13 @@ function Signin() {
             <Formik
             validationSchema={SigninSchema}
             onSubmit={(values)=>{
+              LoginFunction.login(values).then((res)=>{
+                console.log(res, "logged in");
+
+              }).catch((err)=>{
+                console.log(err, "failed to login");
+
+              })
               console.log(values)
             }}
             initialValues={{
