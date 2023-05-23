@@ -24,7 +24,7 @@ function Signin() {
   }
 
   const SigninSchema = Yup.object().shape({
-    email: Yup.string().required('Email is required!'),
+    username: Yup.string().required('Username is required!'),
     password: Yup.string().required('Password is required!').min(6, 'Too short')
   })
 
@@ -40,32 +40,34 @@ function Signin() {
             </div>
             <h1>Log In</h1>
             <Formik
+            initialValues={{
+              username: "",
+              password: ""
+            }}
             validationSchema={SigninSchema}
             onSubmit={(values)=>{
+              console.log(values, "submitte")
               LoginFunction.login(values).then((res)=>{
-                console.log(res, "logged in");
+                console.log(res.data, "logged in");
+                const token = localStorage.setItem('dataKey',JSON.stringify(res.data.access))
 
               }).catch((err)=>{
                 console.log(err, "failed to login");
 
               })
               console.log(values)
-            }}
-            initialValues={{
-              email: "",
-              password: ""
-            }}
+            }}            
             >
               <Form>
-                <Field type="email" name="email" placeholder="Email">
+                <Field type="text" name="username" placeholder="Username">
                 {({
                     field,
                     form: {touched,errors},
                     meta,
                   }) => (
                     <div className='field__group'>
-                      <label htmlFor="email">Email</label>
-                      <input type='email' placeholder='Email' {...field} />
+                      <label htmlFor="username">Username</label>
+                      <input type='username' placeholder='Username' {...field} />
                       {meta.touched && meta.error && (
                         <div className='error'>{meta.error}</div>
                       )}
@@ -104,16 +106,7 @@ function Signin() {
               </Form>
             </Formik>
           </div>
-          
-          {/* <div className='app__signin-contain__left-pic'>
-            <img src={pj} alt="Peter and John" />
-          </div> */}
-          {/* <span className='form__link'>Have no account <a href="signup">Create Account</a></span> */}
-        </div>
-        {/* <div className='app__signin-contain__between'>
-          
-        </div> */}
-        
+        </div>        
         <div className='app__signin-contain__right'></div>
         <div className='app__signin-contain__picture'>
           <img src={pj} alt="Peter and John" />

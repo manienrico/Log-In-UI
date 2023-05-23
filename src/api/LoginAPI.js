@@ -1,16 +1,27 @@
-import axios from 'axios'
 import Axios from 'axios'
-import { Formik } from 'formik';
 
 const instance = Axios.create({
-    baseURL: "http://127.0.0.1:8080/api/",
-    timeout: 1000,
+    baseURL: "http://192.168.1.151:8000/api/v1/users/",
+    timeout: 100000,
     headers:{
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer token here' + "gjhgjggmkgk"
+        // 'Authorization': 'Bearer token here' + "gjhgjggmkgk"
     }
 });
 
+const instance2 = Axios.create({
+    baseURL: "http://localhost:8000/api/v1/users/",
+    timeout: 100000,
+    headers:{
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e…I6MX0.DVAKtwf7NiuupDTwHyMnCRkbi9GteFN1pxMX3M2Rsfs'
+    }
+})
+
 export const LoginFunction ={
-    login: (data) => instance.post("login", data)
+    login: (data) => instance.post("login/", data)
+}
+
+export const TokenFunction ={
+    token: (data) => instance.post("token/", data)
 }
